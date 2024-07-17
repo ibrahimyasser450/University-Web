@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose Department</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="add">Add Student</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Display Students</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="search">Search of Student</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="department"
+                >Choose Department</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sort">Sort Students</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <span class="error" th:text="${errorMessage}"></span>
+    <main class="main-section">
+      <div class="contain">
+        <div class="title-form">
+          <h1>Choose Department</h1>
+        </div>
+        <form
+          action="/department"
+          method="post"
+          id="user-form"
+          class="employee-form"
+        >
+          <div class="form-group">
+            <label class="label" for="student_id">Student ID</label>
+            <input
+              type="text"
+              class="form-control"
+              id="student_id"
+              name="student_id"
+              placeholder="Student ID"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="label">Departments</label>
+            <select
+              id="department"
+              name="department"
+              class="form-control"
+              required
+            >
+              <option value="information system">Information System</option>
+              <option value="computer science">Computer Science</option>
+              <option value="artificial intelligence">
+                Artificial Intelligence
+              </option>
+              <option value="information technology">
+                Information Technology
+              </option>
+              <option value="decision support">Decision Support</option>
+            </select>
+          </div>
+          <button type="submit" id="btn">Submit</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search of Student</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="add">Add Student</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Display Students</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="search"
+                >Search of Student</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="department">Choose Department</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sort">Sort Students</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <span class="error" th:text="${errorMessage}"></span>
+    <main class="main-section">
+      <div class="contain">
+        <div class="title-form">
+          <h1>Search</h1>
+        </div>
+        <form
+          action="/search"
+          method="post"
+          id="user-form"
+          class="employee-form"
+        >
+          <div class="form-group">
+            <label class="label">Search by</label>
+            <select id="search" name="search" class="form-control" required>
+              <option value="Student ID">Student ID</option>
+              <option value="First Name">First Name</option>
+              <option value="Last Name">Last Name</option>
+              <option value="Department">Department</option>
+              <option value="Gender">Gender</option>
+              <option value="GPA">GPA</option>
+              <option value="Level">Level</option>
+              <option value="Address">Address</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="label" for="search_value">Enter Value:</label>
+            <input
+              type="text"
+              id="search_value"
+              name="search_value"
+              class="form-control"
+              placeholder="value"
+              required
+            />
+          </div>
+          <button type="submit" id="btn">Search</button>
+        </form>
+      </div>
+    </main>
+    <h1 class="title-table">Students Information</h1>
+    <div class="container" id="all">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Student ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Department</th>
+            <th>Gender</th>
+            <th>GPA</th>
+            <th>Level</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="student : ${listStudent }">
+            <td th:text="${student.id}">ID</td>
+            <td th:text="${student.student_id}">Student ID</td>
+            <td th:text="${student.first_name}">First Name</td>
+            <td th:text="${student.last_name}">Last Name</td>
+            <td th:text="${student.department}">Department</td>
+            <td th:text="${student.gender}">Gender</td>
+            <td th:text="${student.gpa}">GPA</td>
+            <td th:text="${student.level}">Level</td>
+            <td th:text="${student.address}">Address</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
