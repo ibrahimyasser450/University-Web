@@ -10,14 +10,12 @@ To run the project on Eclipse or IntelliJ or VS Code IDEs:
 7. Import web 
 8. Import devtools
 9. Import mysql
-10. Run the project
-11. Open postman then make request
-12. Enter URL, ex. Signup Student: http://localhost:8080/add
-13. Choose request, ex. POST
-14. Enter data in params
-15. Click send
-
-==================================================================
+ 10. Run the project
+ 11. Open postman then make request
+ 12. Enter URL, ex. Signup Student: http://localhost:8080/add
+ 13. Choose request, ex. POST
+ 14. Enter data in params
+ 15. Click send
 --------------------------------- use the System as admin -----------------------------------
 1. sign up student (POST) --> (url) http://localhost:8080/add --> take 8 arguments student id, first name, last name, department(read only), gender, gpa, level and address  --> to create new student 
 2. update student (PUT) --> (url) http://localhost:8080/update?id=student id --> take 8 arguments student id(read only), first name, last name, department, gender, gpa, level and address  --> to update student
