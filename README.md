@@ -1,10 +1,10 @@
 University Web
 
 To run the project on Eclipse or IntelliJ or VS Code IDEs:
-1- Download Java EE version 21 (jdk-21)
-2- Download Tomcat
-3- Add Tomcat to server
-4- Import maven project
+1. Download Java EE version 21 (jdk-21)
+2. Download Tomcat
+3. Add Tomcat to server
+4. Import maven project
 5- Import data-jpa
 6- Import thymeleaf 
 7- Import web 
