@@ -16,7 +16,10 @@ To run the project on Eclipse or IntelliJ or VS Code IDEs:
  13. Choose request, ex. POST
  14. Enter data in params
  15. Click send
+
 --------------------------------- use the System as admin -----------------------------------
+
+
 1. sign up student (POST) --> (url) http://localhost:8080/add --> take 8 arguments student id, first name, last name, department(read only), gender, gpa, level and address  --> to create new student 
 2. update student (PUT) --> (url) http://localhost:8080/update?id=student id --> take 8 arguments student id(read only), first name, last name, department, gender, gpa, level and address  --> to update student
 3. search for student (POST) --> (url) http://localhost:8080/search --> take 2 arguments search attribute, value --> search attribute such as student id or first name or last name and so on and the value
