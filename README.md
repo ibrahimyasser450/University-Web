@@ -1,7 +1,3 @@
-                                                            
- University Web
-
-
 
 To run the project on Eclipse or IntelliJ or VS Code IDEs:
 1. Download Java EE version 21 (jdk-21)
