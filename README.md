@@ -1,4 +1,6 @@
-                                                To run the project on Eclipse or IntelliJ or VS Code IDEs:
+University Web
+
+To run the project on Eclipse or IntelliJ or VS Code IDEs:
 1- Download Java EE version 21 (jdk-21)
 2- Download Tomcat
 3- Add Tomcat to server
@@ -14,6 +16,7 @@
 13- Choose request, ex. POST
 14- Enter data in params
 15- Click send
+
 ==================================================================
 --------------------------------- use the System as admin -----------------------------------
 1- sign up student (POST) --> (url) http://localhost:8080/add --> take 8 arguments student id, first name, last name, department(read only), gender, gpa, level and address  --> to create new student 
