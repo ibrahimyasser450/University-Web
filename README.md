@@ -8,7 +8,7 @@ To run the project on Eclipse or IntelliJ or VS Code IDEs:
 6. Import thymeleaf 
 7. Import web 
 8. Import devtools
-9. Import mysql
+9. Import mysql (MySQL Workbench)
  10. Run the project
  11. Open postman then make request
  12. Enter URL, ex. Signup Student: http://localhost:8080/add
